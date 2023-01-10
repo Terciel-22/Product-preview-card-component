@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      background: hsl(30, 38%, 92%);
+    }
+    
+    h1 {
+      font-family: "Fraunces", sans-serif;
+    }
+
+    p {
+      color: hsl(228, 12%, 48%)
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main > .container {
+      width: 35rem;
+      height: 26.67rem;
+      border-radius: .5rem;
+      background: hsl(0, 0%, 100%);
+      overflow: hidden;
+      display: flex;
+    }
+
+    main > .container > img.desktop {
+      width: 50%;
+      height: 100%;
+    }
+    main > .container > img.mobile {
+      display: none;
+    }
+    main > .container > div {
+      padding: 1.6rem;
+    }
+    main > .container > div > p:nth-child(1) {
+      text-transform: uppercase;
+      letter-spacing: 0.33rem;
+    }
+    main > .container > div > h1 {
+      color: hsl(212, 21%, 14%);
+    }
+    main > .container > div > div {
+      display: flex;
+      align-items: center;
+    }
+    main > .container > div > div > h1 {
+      color: hsl(158, 36%, 37%);
+      margin-right: 1rem;
+    }
+    main > .container > div > div > p {
+      text-decoration: line-through;
+    }
+    main > .container > div > button {
+      background: hsl(158, 36%, 37%);
+      color: hsl(0, 0%, 100%);;
+      width: 100%;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main > .container > div > button:hover,
+    main > .container > div > button:focus {
+      background: hsl(158, 39%, 25%);
+    }
+    main > .container > div > button > span {
+      margin-right: 0.7rem;
+    }
+
+    @media screen and (max-width: 375px) {
+      main > .container {
+        flex-direction: column;
+        height: 40rem;
+        width: 22rem;
+      }
+      main > .container > img.desktop{
+        display: none;
+      }
+      main > .container > img.mobile{
+        display: block;
+        width: 100%;
+        height: 40%;
+      }
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <img class="desktop" src="images/image-product-desktop.jpg" alt="Gabrielle Essence Eau De Parfum">
+      <img class="mobile" src="images/image-product-mobile.jpg" alt="Gabrielle Essence Eau De Parfum">
+      <div>
+        <p>Perfume</p>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div>
+          <h1>$149.99</h1>
+          <p>$169.99</p>
+        </div>
+        
+        <button>
+          <span><img src="images/icon-cart.svg" alt="Icon cart"></span>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Terciel-22">Terciel-22</a>.
+    </div>
+  </footer>
+</body>
+</html>
